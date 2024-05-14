@@ -1,0 +1,24 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.qrcode {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qrcode img {
+    max-width: 100%;
+    height: auto;
+}

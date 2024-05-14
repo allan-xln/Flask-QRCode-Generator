@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "modelo": "Exemplo de Modelo",
+        "tamanho": "Exemplo de Tamanho",
+        "fabricacao": "Exemplo de Fabrica\u00e7\u00e3o",
+        "n_pedido": "12345",
+        "lote": "ABCDE",
+        "cod": "ABCDE12345"
+    },
+    {
+        "id": 2,
+        "modelo": "Teste",
+        "tamanho": "Teste",
+        "fabricacao": "gdsdgs",
+        "n_pedido": "fdsg",
+        "lote": "gsdgs",
+        "cod": "gdsgs"
+    },
+    {
+        "id": 3,
+        "modelo": "Exemplo de Modelo",
+        "tamanho": "Exemplo de Tamanho",
+        "fabricacao": "Exemplo de Fabrica\u00e7\u00e3o",
+        "n_pedido": "12345",
+        "lote": "ABCDE",
+        "cod": "ABCDE12345"
+    }
+]

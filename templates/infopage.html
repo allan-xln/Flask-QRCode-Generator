@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No.WasTee - Zero Desperdício</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='infopage.css') }}">
+    <!-- Adiciona Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título animado -->
+        <h1 class="title">No.WasTee - Design Zero Desperdício</h1>
+
+        <!-- Resumo do texto -->
+        <p>O design zero desperdício de moda é uma abordagem ancestral que busca maximizar o aproveitamento da matéria-prima, minimizando o descarte. Desde os tempos antigos, as pessoas têm utilizado integralmente os materiais disponíveis para confeccionar suas roupas, como evidenciado pelas túnicas gregas e saris indianos. Esta prática, agora revitalizada como design zero desperdício, é crucial em tempos de crise climática e quando a indústria da moda é uma das mais poluentes do mundo.</p>
+        
+        <p>A no.wasTee adota essa filosofia, reimaginando modelos de camisetas utilizando técnicas de design zero desperdício. A fundadora, Fabiana Muranaka, percebeu a necessidade de uma abordagem mais sustentável após anos tentando lidar com os resíduos da produção tradicional. Sua metodologia patenteada não apenas reutiliza materiais, mas também busca compartilhar conhecimento e influenciar outras marcas e confecções a adotar práticas mais responsáveis.</p>
+        
+        <p>Ao usar esta abordagem, não apenas estamos promovendo um estilo de vida mais consciente, mas também incentivando uma mudança na indústria da moda em direção a métodos de produção mais sustentáveis e ecológicos. Junte-se a nós no movimento no.wasTee e faça parte dessa transformação positiva!</p>
+        
+        <h2 class="title2">Informações da Peça</h2>
+        <!-- Dados dinâmicos -->
+        <p>ID: {{ id }}</p>
+        <p>Peça: {{ peca }}</p>
+        <p>Tamanho: {{ tamanho }}</p>
+        <p>Modelo: {{ modelo }}</p>
+        <p>Fabricação: {{ fabricacao }}</p>
+        <p>Número do Pedido: {{ n_pedido }}</p>
+        <p>Lote: {{ lote }}</p>
+        <p>Código: {{ cod }}</p>
+        
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        Footer só para dizer que tem :|
+    </footer>
+</body>
+</html>

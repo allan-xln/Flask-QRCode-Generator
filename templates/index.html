@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/gerar_qrcode" method="post">
+            <label for="peca">Peça:</label>
+            <input type="text" id="peca" name="peca"><br><br>
+            <label for="tamanho">Tamanho:</label>
+            <input type="text" id="tamanho" name="tamanho"><br><br>
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo"><br><br>
+            <label for="fabricacao">Fabricação:</label>
+            <input type="text" id="fabricacao" name="fabricacao"><br><br>
+            <label for="n_pedido">Número do Pedido:</label>
+            <input type="text" id="n_pedido" name="n_pedido"><br><br>
+            <label for="lote">Lote:</label>
+            <input type="text" id="lote" name="lote"><br><br>
+            <label for="cod">Código:</label>
+            <input type="text" id="cod" name="cod"><br><br>
+            
+            <button type="button" class="btn btn-info" id="preencherCampos">Preencher Campos</button>
+            <button type="submit" class="btn btn-dark">Gerar QR Code</button>
+            
+
+        </form>
+        <!-- Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="successModalLabel">Sucesso</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>QR Code gerado com sucesso!</p>
+                        <img id="qrcode_img" src="{{ qrcode_path }}" alt="QR Code" style="max-width: 100%; height: auto;">
+                    </div>
+                        
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+        <script>
+            // Função para preencher os campos do formulário
+            document.getElementById('preencherCampos').addEventListener('click', function() {
+                // Defina os valores para os campos do formulário
+                document.getElementById('peca').value = 'Exemplo de Peça';
+                document.getElementById('tamanho').value = 'Exemplo de Tamanho';
+                document.getElementById('modelo').value = 'Exemplo de Modelo';
+                document.getElementById('fabricacao').value = 'Exemplo de Fabricação';
+                document.getElementById('n_pedido').value = '12345';
+                document.getElementById('lote').value = 'ABCDE';
+                document.getElementById('cod').value = 'ABCDE12345';
+            });
+        </script>
+
+        
+        <!-- Script para exibir o modal -->
+        <script>
+            {% if success %}
+            $(document).ready(function(){
+                $('#successModal').modal('show');
+                $('#qrcode_img').attr('src', '{{ qrcode_path }}');
+            });
+            {% endif %}
+        </script>
+</body>
+</html>
